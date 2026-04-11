@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contatti | Andrea Malo</title>
+  <meta name="description" content="Contatta Andrea Malo per confronti, collaborazioni o progetti in ambito AI, sviluppo web e analisi dati.">
+  <meta name="keywords" content="Contatti Andrea Malo, portfolio, AI, web development, GitHub">
+  <meta name="author" content="Andrea Malo">
+
+  <meta property="og:title" content="Contatti | Andrea Malo">
+  <meta property="og:description" content="Scrivi ad Andrea Malo per collaborazioni, confronti e progetti digitali.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/anteprima-sito.jpg">
+  <meta property="og:locale" content="it_IT">
+
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/4d8f0b0f2c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">Andrea Malo</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Apri o chiudi il menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">Curriculum</a></li>
+        <li><a href="contatti.html" aria-current="page">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <section class="glass-card contact-card">
+      <h1>Contattami</h1>
+      <p class="contact-intro">
+        Se vuoi metterti in contatto con me per confronti, collaborazioni o progetti,
+        puoi scrivermi tramite questo form.
+      </p>
+
+      <form class="contact-form">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="La tua email" required>
+
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" rows="6" placeholder="Scrivi qui il tuo messaggio" required></textarea>
+
+        <button type="submit" class="btn btn-primary">Invia messaggio</button>
+      </form>
+
+      <div class="contact-links">
+        <h2>Altri riferimenti</h2>
+        <p>
+          <strong>GitHub:</strong>
+          <a href="https://github.com/andmalo" target="_blank" rel="noopener noreferrer">github.com/andmalo</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    }
+  </script>
+</body>
+</html>
