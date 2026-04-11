@@ -79,6 +79,7 @@ integrazione del form con servizi come EmailJS
 miglioramento ulteriore dell’accessibilità
 aggiunta di animazioni e microinterazioni
 pubblicazione online del portfolio
-Autore
+
+Sviluppatore:
 
 Andrea Malo
