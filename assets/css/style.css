@@ -513,7 +513,7 @@ img {
 
 @media (max-width: 768px) {
   .nav-toggle {
-    display: block;
+    display: flex;
   }
 
   .nav-menu {

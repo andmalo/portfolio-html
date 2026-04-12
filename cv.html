@@ -59,7 +59,7 @@
         <h3><i class="fas fa-user"></i> Profilo</h3>
         <p>
           Sto sviluppando competenze in analisi dati, sviluppo web e fondamenti di machine learning,
-          con l' obiettivo di costruire soluzioni digitali moderne, utili e orientate al business.
+          con l'obiettivo di costruire soluzioni digitali moderne, utili e orientate al business.
         </p>
       </article>
 
@@ -84,7 +84,7 @@
       <article class="glass-card cv-card">
         <h3><i class="fas fa-tools"></i> Competenze</h3>
         <ul>
-          <li>HTML, CSS, SCSS, Javascript</li>
+          <li>HTML, CSS, SCSS, JavaScript</li>
           <li>Analisi dati e approccio statistico</li>
           <li>Fondamenti di AI e machine learning</li>
           <li>Problem solving, adattabilità, teamwork</li>
@@ -110,7 +110,8 @@
 
     if (navToggle && navMenu) {
       navToggle.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
+        const isOpen = navMenu.classList.toggle("active");
+        navToggle.setAttribute("aria-expanded", isOpen);
       });
     }
   </script>
