@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Curriculum Vitae | Andrea Malo</title>
+  <meta name="description" content="Curriculum Vitae di Andrea Malo: formazione, esperienza, competenze e progetti in ambito AI, sviluppo web e analisi dati.">
+  <meta name="keywords" content="Curriculum Andrea Malo, CV, AI, web development, analisi dati, portfolio">
+  <meta name="author" content="Andrea Malo">
+
+  <meta property="og:title" content="Curriculum Vitae | Andrea Malo">
+  <meta property="og:description" content="Scopri il percorso formativo, le competenze e l’esperienza di Andrea Malo.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/4d8f0b0f2c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+
+  <header class="header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">Andrea Malo</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Apri o chiudi il menu" aria-expanded="false" aria-controls="navMenu">
+       ☰
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html" aria-current="page">Curriculum</a></li>
+        <li><a href="contatti.html">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container page">
+    <section class="page-intro">
+      <img src="assets/img/profilo.jpg" alt="Foto profilo di Andrea Malo" class="profile-small">
+      <h1>Curriculum Vitae</h1>
+      <h2>Andrea Malo</h2>
+      <p>
+        Studente di AI e Agenti AI per il Business con background in statistica e interesse
+        per sviluppo web, analisi dati, automazione e applicazioni concrete dell’intelligenza artificiale.
+      </p>
+    </section>
+
+    <section class="cv-grid">
+      <article class="glass-card cv-card">
+        <h3><i class="fas fa-user"></i> Profilo</h3>
+        <p>
+          Sto sviluppando competenze in analisi dati, sviluppo web e fondamenti di machine learning,
+          con l'obiettivo di costruire soluzioni digitali moderne, utili e orientate al business.
+        </p>
+      </article>
+
+      <article class="glass-card cv-card">
+        <h3><i class="fas fa-graduation-cap"></i> Formazione</h3>
+        <ul>
+          <li><strong>Master in AI per il Business</strong> — 2025 - Presente</li>
+          <li><strong>Laurea in Statistica, Finanza e Assicurazioni</strong> — 2021 - 2025</li>
+        </ul>
+      </article>
+
+      <article class="glass-card cv-card">
+        <h3><i class="fas fa-briefcase"></i> Esperienza</h3>
+        <p><strong>Addetto domenicale alle vendite durante gli studi universitari</strong> — 2022-2026</p>
+        <ul>
+          <li>Gestione della relazione con il cliente in contesti dinamici.</li>
+          <li>Supporto nella risoluzione di richieste e problematiche operative.</li>
+          <li>Collaborazione con il team per garantire qualità del servizio ed efficienza.</li>
+        </ul>
+      </article>
+
+      <article class="glass-card cv-card">
+        <h3><i class="fas fa-tools"></i> Competenze</h3>
+        <ul>
+          <li>HTML, CSS, SCSS, JavaScript</li>
+          <li>Analisi dati e approccio statistico</li>
+          <li>Fondamenti di AI e machine learning</li>
+          <li>Problem solving, adattabilità, teamwork</li>
+        </ul>
+      </article>
+
+      <article class="glass-card cv-card full-width">
+        <h3><i class="fas fa-diagram-project"></i> Progetti</h3>
+        <p>
+          Sto sviluppando un portfolio personale per presentare il mio profilo, il mio curriculum
+          e il mio percorso formativo in modo chiaro, moderno e professionale.
+        </p>
+        <a href="https://github.com/andmalo" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+          Portfolio GitHub
+        </a>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    if (navToggle && navMenu) {
+      navToggle.addEventListener("click", () => {
+        const isOpen = navMenu.classList.toggle("active");
+        navToggle.setAttribute("aria-expanded", isOpen);
+      });
+    }
+  </script>
+</body>
+</html>
