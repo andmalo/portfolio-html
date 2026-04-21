@@ -22,6 +22,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script src="https://kit.fontawesome.com/4d8f0b0f2c.js" crossorigin="anonymous"></script>
+  <script>
+    (function () {
+      var t = localStorage.getItem("theme");
+      if (t === "light") document.documentElement.setAttribute("data-theme", "light");
+    })();
+  </script>
 </head>
 <body>
   <div class="bg-orb orb-1"></div>
@@ -31,15 +37,21 @@
     <nav class="navbar container">
       <a href="index.html" class="logo">Andrea Malo</a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Apri o chiudi il menu" aria-expanded="false" aria-controls="navMenu">
-       ☰
-      </button>
-
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="cv.html" aria-current="page">Curriculum</a></li>
         <li><a href="contatti.html">Contatti</a></li>
       </ul>
+
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema">
+          <span class="toggle-sun">☀</span>
+          <span class="toggle-moon">☾</span>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Apri o chiudi il menu" aria-expanded="false" aria-controls="navMenu">
+          ☰
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -113,7 +125,35 @@
         const isOpen = navMenu.classList.toggle("active");
         navToggle.setAttribute("aria-expanded", isOpen);
       });
+
+      navMenu.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+          navMenu.classList.remove("active");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+          navMenu.classList.remove("active");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
     }
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    function applyTheme(theme) {
+      document.documentElement.setAttribute("data-theme", theme);
+      localStorage.setItem("theme", theme);
+    }
+
+    applyTheme(localStorage.getItem("theme") || "dark");
+
+    themeToggle.addEventListener("click", () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      applyTheme(current === "light" ? "dark" : "light");
+    });
   </script>
 </body>
 </html>
